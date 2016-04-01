@@ -180,9 +180,9 @@ cat <<EOF
 Your new clone is ready to go.
 
 Next steps,
-Commit your new clone, be sure to save it as 'bitcoinclone:altcoin':
+Commit your new clone, be sure to save it as 'derrend/bitcoinclone:altcoin':
 
-    docker commit <container_name> bitcoinclone:altcoin
+    docker commit <container_name> derrend/bitcoinclone:altcoin
 
 If you haven't already, clone the bitcoinclone git repo:
 
@@ -197,22 +197,22 @@ editor if you need to:
 
     vi bitcoin.conf
 
-Build a new easy to deploy image from 'bitcoinclone:altcoin' (this is
+Build a new easy to deploy image from 'derrend/bitcoinclone:altcoin' (this is
 why the image name was specified earlier), you can even overwirte the
 image we are building from to save space since it has no further use:
 
-    docker build -t bitcoinclone:altcoin .
+    docker build -t derrend/bitcoinclone:altcoin .
 
 Begin deploying nodes. You will need to spawn at least two to form a
 network:
 
-    docker run -it --name node_1 bitcoinclone:altcoin
-    docker run -it --name node_2 bitcoinclone:altcoin
+    docker run -it --name node_1 derrend/bitcoinclone:altcoin
+    docker run -it --name node_2 derrend/bitcoinclone:altcoin
 
 Images may also be run in daemon mode:
 
-    docker run -d --name node_1 bitcoinclone:altcoin
-    docker run -d --name node_2 bitcoinclone:altcoin
+    docker run -d --name node_1 derrend/bitcoinclone:altcoin
+    docker run -d --name node_2 derrend/bitcoinclone:altcoin
 
 Enjoy!
 --------

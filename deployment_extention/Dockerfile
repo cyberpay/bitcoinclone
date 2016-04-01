@@ -1,4 +1,4 @@
-FROM bitcoinclone:altcoin
+FROM derrend/bitcoinclone:altcoin
 
 WORKDIR /root/
 
