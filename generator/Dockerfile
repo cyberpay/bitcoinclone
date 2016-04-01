@@ -12,14 +12,14 @@ RUN echo 'deb-src ftp://ftp.us.debian.org/debian/ sid main contrib non-free' >> 
     apt-get --install-recommends install -y \
         libbitcoin-dev && \
     apt-get install -y \
-        vim \
+#        vim \
         git && \
     rm -rf /var/lib/apt/lists/* && \
     \
     cd $HOME && \
-    git clone https://github.com/derrend/bitcoinclone.git && \
+    git clone https://github.com/derrend/bitcointemplate.git && \
     \
-    cd $HOME/bitcoinclone && \
+    cd $HOME/bitcointemplate && \
     autoreconf --install && \
     aclocal && \
     automake --add-missing && \

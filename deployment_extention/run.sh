@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Capture the suggested rpcpassword paramiter from the uninitialised warning message
-$HOME/bitcoinclone/src/bitcoind 2> $HOME/credentials.txt || true && \
+$HOME/bitcointemplate/src/bitcoind 2> $HOME/credentials.txt || true && \
 grep rpcpassword= $HOME/credentials.txt >> $HOME/.bitcoin/bitcoin.conf
 
 # Capture ip components
@@ -19,6 +19,6 @@ else {
     } fi
 
 # Start bitcoin and connect to debug log
-$HOME/bitcoinclone/src/bitcoind -debug &
+$HOME/bitcointemplate/src/bitcoind -debug &
 tail -f $HOME/.bitcoin/debug.log
 
