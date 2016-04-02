@@ -2,12 +2,13 @@
 Spawn and distribute blockchain networks on the fly. Based on bitcoin 0.10.
 
 ## Dependencies
+[git](https://git-scm.com/downloads "git client"),
 [docker](https://docs.docker.com/engine/installation/ "docker engine")
 
 ## Instructions
 Clone the bitcoinclone repo and run the setup script.
 
-    git clone https://something && \
+    git clone https://github.com/derrend/bitcoinclone.git && \
     cd bitcoinclone && \
     bash setup.sh
 Once the genesis block is mined and the deployment_extention wrapper has been applied (the setup script takes care of all this) you will find a new image inside your local repository named `derrend/bitcoinclone:altcoin`.
