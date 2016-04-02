@@ -21,4 +21,3 @@ else {
 # Start bitcoin and connect to debug log
 $HOME/bitcointemplate/src/bitcoind -debug &
 tail -f $HOME/.bitcoin/debug.log
-
