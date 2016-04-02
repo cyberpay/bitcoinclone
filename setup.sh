@@ -1,8 +1,30 @@
 #!/bin/bash
 
+clear
+cat <<EOF
+--------
+You can either download the bitcoinclone prebuilt container from dockerhub
+or you can build it from the 'generator' template folder (perhaps you
+have made some customisations?).
+--------
+
+EOF
+
+echo -n "Would you like to download the 2GB image from the repository?
+Y/N: "
+read CHOICE
+if [ $CHOICE == "Y" ] || [ $CHOICE == "y" ] || [ $CHOICE == "Yes" ] || [ $CHOICE == "yes" ]; then {
+    docker pull derrend/bitcoinclone
+    wait
+    }
+else {
+    cd generator/ && \
+    docker build -t derrend/bitcoinclone . && \
+    cd ..
+    } fi
+
 # Pull the precompiled bitcoinclone container, run it and save the
 # result
-docker pull derrend/bitcoinclone && \
 docker run -it --name seed derrend/bitcoinclone && \
 docker commit seed derrend/bitcoinclone:altcoin && \
 docker rm seed && \
