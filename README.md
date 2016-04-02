@@ -14,7 +14,7 @@ Once the genesis block is mined and the deployment_extention wrapper has been ap
 
 Run at least two instances of this image to establish a network. You may deploy as many instances as you wish.
 
-    docker run -d --name node_1 derrend/bitcoinclone:altcoin
+    docker run -d --name node_1 derrend/bitcoinclone:altcoin && \
     docker run -it --name node_2 derrend/bitcoinclone:altcoin
 ## Important
 IP addresses are deterministic in docker and so each new instance is set to connect to its own IP address - 1. If it fails to receive a response it will connect to its own IP address + 1.
